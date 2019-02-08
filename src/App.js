@@ -67,6 +67,7 @@ class App extends Component {
 
     return (
       <div className='box'>
+        <a className='home' href="/"><img width='40px' src={require('./img/home.png')} alt="[HOME]"/></a>
         <div className='messages' ref={this.messagesRef}>
           <TransitionGroup className='message'>
             { messages }

@@ -194,3 +194,12 @@ button:disabled {
 	margin: 0;
 	background: #eceff1;
 }
+
+/* --------------------------
+	Home Button
+---------------------------*/
+.home {
+	position: fixed;
+    top: 10px;
+    left: 10px
+}
