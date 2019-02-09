@@ -27,16 +27,18 @@ class Connexion extends Component {
         return (
             <div className='connexionBox'>
                 <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
-                <form className='connexion' onSubmit={this.handleSubmit}>
-                    <input
-                        value={this.state.pseudo}
-                        onChange={this.handleChange}
-                        placeholder='Pseudo'
-                        type='text'
-                        required 
-                    />
-                    <button type='submit'>GO</button>
-                </form>
+                <div className="border">
+                    <form className='connexion' onSubmit={this.handleSubmit}>
+                        <input
+                            value={this.state.pseudo}
+                            onChange={this.handleChange}
+                            placeholder='Pseudo'
+                            type='text'
+                            required 
+                        />
+                        <button type='submit'>GO</button>
+                    </form>
+                </div>
             </div>
         )
     }
