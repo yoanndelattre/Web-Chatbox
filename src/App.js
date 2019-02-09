@@ -67,14 +67,16 @@ class App extends Component {
 
     return (
       <div className='box'>
-        <a className='home' href="/">HOME</a>
-        <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
-        <div className='messages' ref={this.messagesRef}>
-          <TransitionGroup className='message'>
-            { messages }
-          </TransitionGroup>
+        <div className="border">
+          <a className='home' href="/">HOME</a>
+          <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
+          <div className='messages' ref={this.messagesRef}>
+            <TransitionGroup className='message'>
+              { messages }
+            </TransitionGroup>
+          </div>
+          <Formulaire length={140} pseudo={this.state.pseudo} addMessage={this.addMessage} />
         </div>
-        <Formulaire length={140} pseudo={this.state.pseudo} addMessage={this.addMessage} />
       </div>
     )
   }
