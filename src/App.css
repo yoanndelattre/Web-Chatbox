@@ -43,6 +43,7 @@ body {
 	border: 5px solid #2196F3;
 	border-width: 0 0 5px 0;
 	outline: none;
+	text-align: center;
 }
 .box {
 	margin: auto;
