@@ -1,6 +1,7 @@
 import React, { Component, createRef } from 'react'
 import './App.css'
 import './animations.css'
+import home_logo from './img/home.png'
 
 import Formulaire from './components/Formulaire'
 import Message from './components/Message'
@@ -68,7 +69,7 @@ class App extends Component {
     return (
       <div className='box'>
         <div className="border">
-          <a className='home' href="/">HOME</a>
+          <a className='home' href="/"><img src={home_logo} alt="home-button"/></a>
           <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
           <div className='messages' ref={this.messagesRef}>
             <TransitionGroup className='message'>
