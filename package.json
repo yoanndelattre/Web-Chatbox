@@ -2,7 +2,7 @@
   "name": "chatbox-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/",
   "dependencies": {
     "firebase": "^5.8.1",
     "prop-types": "^15.6.2",
