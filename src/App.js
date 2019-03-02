@@ -70,7 +70,7 @@ class App extends Component {
       <div className='box'>
         <div className="border">
           <a className='home' href="/"><img src={home_logo} alt="home-button"/></a>
-          <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
+          <a className='report-problem' href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
           <div className='messages' ref={this.messagesRef}>
             <TransitionGroup className='message'>
               { messages }
