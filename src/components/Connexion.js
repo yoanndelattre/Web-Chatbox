@@ -26,7 +26,7 @@ class Connexion extends Component {
 
         return (
             <div className='connexionBox'>
-                <a className='report-problem' href="mailto:contact@yoanndelattre.com">Report a Problem</a>
+                <a className='report-problem' href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
                 <div className="border">
                     <form className='connexion' onSubmit={this.handleSubmit}>
                         <input
