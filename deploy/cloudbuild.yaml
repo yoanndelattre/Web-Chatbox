@@ -1,5 +1,9 @@
 steps:
 
+- id: "Copy script Firebase"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', "gs://firebase_markdown-config/conf-firebase.js", "./src/"]
+
 - id: "install dependency"
   name: 'gcr.io/cloud-builders/npm'
   args: ['install']
