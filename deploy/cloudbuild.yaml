@@ -15,3 +15,11 @@ steps:
 - id: "Sync static files in bucket"
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['-m', 'rsync', '-d', '-r', './build/', 'gs://website_chatbox-builded/']
+
+- id: "Download git repo for config App Engine"
+  name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://source.developers.google.com/p/chatbox-236716/r/Config-App-Engine-Chatbox']
+  
+- id: "DEPLOY ON APP ENGINE"
+  name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--config', './Config-App-Engine-Chatbox/master/cloudbuildDeploy.yaml', './Config-App-Engine-Chatbox/']
