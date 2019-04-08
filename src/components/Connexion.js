@@ -26,7 +26,7 @@ class Connexion extends Component {
 
         return (
             <div className='container'>
-                <h1 className="title">Chatbox</h1>
+                <h1 className="title">Chatbox - Conversation</h1>
                 <div className='connexionBox'>
                     <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
                     <div className="border">

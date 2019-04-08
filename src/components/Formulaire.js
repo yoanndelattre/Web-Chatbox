@@ -46,7 +46,7 @@ class Formulaire extends Component {
                 { this.state.length }
             </div>
             <button type='submit' >
-                Envoyer
+                Send
             </button>
       </form>
       ) 
