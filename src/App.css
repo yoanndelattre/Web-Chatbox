@@ -22,6 +22,12 @@ body {
 	margin: 0;
 	font-size: 20px;
 }
+.container {
+	display: inline-block;
+	background-color: #eceff1;
+	width: 100%;
+	height: 100%;
+}
 .connexionBox {
 	background-color: #eceff1;
 	display: flex;
@@ -243,4 +249,15 @@ button:disabled {
 
 .border {
 	margin: 15px;
+}
+
+/* -------------------------
+	Title
+------------------------- */
+
+.title {
+	text-align: center;
+	background-color: #eceff1;
+	font-weight: normal;
+    font-size: 35px;
 }
