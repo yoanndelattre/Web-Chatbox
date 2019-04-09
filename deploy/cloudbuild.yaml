@@ -1,8 +1,16 @@
 steps:
 
+- id: "Copy robots.txt file"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', "gs://analytics_chatbox-box-config/robots.txt", "./public/"]
+
+- id: "Copy sitemap.xml file"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', "gs://analytics_chatbox-box-config/sitemap.xml", "./public/"]
+
 - id: "Copy script Firebase"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://firebase_markdown-config/conf-firebase.js", "./src/"]
+  args: ['cp', "gs://firebase_chatbox-config/conf-firebase.js", "./src/"]
 
 - id: "install dependency"
   name: 'gcr.io/cloud-builders/npm'
