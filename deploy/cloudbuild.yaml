@@ -26,7 +26,7 @@ steps:
 
 - id: "Move Website Chatbox Project folder"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', './build/.', './express-server/github_yoanndelattre_express-server-gcp/app_files/']
+  args: ['cp', '-r', './build/.', './express-server/github_yoanndelattre_express-server-gcp/app_files/']
 
 - id: "Move WebsiteChatboxConfigAppEngine.yaml in github_yoanndelattre_express-server-gcp folder"
   name: 'gcr.io/cloud-builders/gsutil'
