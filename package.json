@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "braces": "^2.3.1"
+    "braces": "^3.0.2",
+    "querystringify": "^2.1.1"
   }
 }
