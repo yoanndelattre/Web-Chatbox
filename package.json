@@ -30,6 +30,6 @@
   ],
   "devDependencies": {
     "braces": "^2.3.1",
-    "querystringify": "^2.0.0"
+    "querystringify": ">=2.0.0"
   }
 }
