@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Redirect } from 'react-router-dom'
+import CookieAlert from '../Cookie-Alert'
 
 class Connexion extends Component {
 
@@ -25,24 +26,27 @@ class Connexion extends Component {
         }
 
         return (
-            <div className='container'>
-                <h1 className="title">Chatbox - Conversation</h1>
-                <div className='connexionBox'>
-                    <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
-                    <div className="border">
-                        <form className='connexion' onSubmit={this.handleSubmit}>
-                            <input
-                                value={this.state.pseudo}
-                                onChange={this.handleChange}
-                                placeholder='Pseudo'
-                                type='text'
-                                required 
-                            />
-                            <button type='submit'>GO</button>
-                        </form>
+            <Fragment>
+                <CookieAlert/>
+                <div className='container'>
+                    <h1 className="title">Chatbox - Conversation</h1>
+                    <div className='connexionBox'>
+                        <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
+                        <div className="border">
+                            <form className='connexion' onSubmit={this.handleSubmit}>
+                                <input
+                                    value={this.state.pseudo}
+                                    onChange={this.handleChange}
+                                    placeholder='Pseudo'
+                                    type='text'
+                                    required 
+                                />
+                                <button type='submit'>GO</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

@@ -1,7 +1,8 @@
-import React, { Component, createRef } from 'react'
+import React, { Component, createRef, Fragment } from 'react'
 import './App.css'
 import './animations.css'
 import home_logo from './img/home.png'
+import CookieAlert from './Cookie-Alert'
 
 import Formulaire from './components/Formulaire'
 import Message from './components/Message'
@@ -67,18 +68,21 @@ class App extends Component {
       ))
 
     return (
-      <div className='box'>
-        <div className="border">
-          <a className='home' href="/"><img src={home_logo} alt="home-button"/></a>
-          <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
-          <div className='messages' ref={this.messagesRef}>
-            <TransitionGroup className='message'>
-              { messages }
-            </TransitionGroup>
+      <Fragment>
+        <CookieAlert/>
+        <div className='box'>
+          <div className="border">
+            <a className='home' href="/"><img src={home_logo} alt="home-button"/></a>
+            <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
+            <div className='messages' ref={this.messagesRef}>
+              <TransitionGroup className='message'>
+                { messages }
+              </TransitionGroup>
+            </div>
+            <Formulaire length={140} pseudo={this.state.pseudo} addMessage={this.addMessage} />
           </div>
-          <Formulaire length={140} pseudo={this.state.pseudo} addMessage={this.addMessage} />
         </div>
-      </div>
+      </Fragment>
     )
   }
 }
