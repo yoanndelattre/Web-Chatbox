@@ -32,6 +32,7 @@
   "devDependencies": {
     "braces": "^3.0.2",
     "eslint": "^5.16.0",
+    "handlebars": "^4.1.2",
     "querystringify": "^2.1.1"
   }
 }
