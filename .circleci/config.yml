@@ -26,6 +26,9 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
       - run:
+          name: import firebase config
+          command: echo $firebase_conf > ./conf-firebase
+      - run:
           name: run test
           command: npm run test
       - save_cache:
