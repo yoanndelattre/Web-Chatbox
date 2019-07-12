@@ -27,7 +27,7 @@ jobs:
             - v1-dependencies-
       - run:
           name: import firebase config
-          command: echo $firebase_conf
+          command: echo $firebase_conf >> ./conf-firebase
       - run:
           name: run test
           command: npm run test
