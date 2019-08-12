@@ -4,14 +4,14 @@
   "private": true,
   "homepage": "/",
   "dependencies": {
-    "firebase": "^6.3.4",
+    "firebase": "^6.3.5",
     "prop-types": "^15.6.2",
     "re-base": "^4.0.0",
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-cookie-banner": "^4.0.0",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.1.0",
     "react-transition-group": "^4.2.2"
   },
   "scripts": {
@@ -31,7 +31,7 @@
   ],
   "devDependencies": {
     "braces": "^3.0.2",
-    "eslint": "^5.16.0",
+    "eslint": "^6.1.0",
     "handlebars": "^4.1.2",
     "lodash": "^4.17.15",
     "querystringify": "^2.1.1"
