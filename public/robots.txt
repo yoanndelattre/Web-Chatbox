@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /pseudo
+Disallow: /pseudo/
+Allow: /
+
+# Sitemap files
+Sitemap: https://chatbox.yoanndelattre.com/sitemap.xml
