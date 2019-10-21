@@ -1,29 +1,17 @@
 steps:
 
-- id: "Copy script Firebase"
-  name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', "gs://firebase_chatbox-config/conf-firebase.js", "./src/"]
+- id: "Pull app image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['pull', 'gcr.io/chatbox-project-256619/chatbox:latest']
 
-- id: "install dependency"
-  name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
+- id: "Build app image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/chatbox-project-256619/chatbox:latest', '.']
 
-- id: "Build static files"
-  name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
+- id: "Push app image"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/chatbox-project-256619/chatbox:latest']
 
-- id: "Download Express server"
-  name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://source.developers.google.com/p/chatbox-236716/r/github_yoanndelattre_express-server-gcp', './webserver_prod']
-
-- id: "Move Website Chatbox Project folder"
-  name: 'alpine'
-  args: ['sh', '-c', 'cp -rf ./build/. ./webserver_prod/app_files/']
-
-- id: "Move WebsiteChatboxConfigAppEngine.yaml in webserver_prod folder"
-  name: 'alpine'
-  args: ['sh', '-c', 'mv ./deploy/WebsiteChatboxConfigAppEngine.yaml ./webserver_prod/']
-
-- id: "DEPLOY APP ENGINE"
+- id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', './webserver_prod/WebsiteChatboxConfigAppEngine.yaml', './deploy/dispatch.yaml', '--version=1']
+  args: ['beta', 'run', 'deploy', 'chatbox', '--image=gcr.io/chatbox-project-256619/chatbox:latest', '--region=us-central1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m']
