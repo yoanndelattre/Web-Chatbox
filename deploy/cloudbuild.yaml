@@ -4,10 +4,6 @@ steps:
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', 'gs://chatbox_firebase_conf/conf-firebase.js', './src/']
 
-- id: "Pull app image"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['pull', 'gcr.io/chatbox-project-256619/chatbox:latest']
-
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/chatbox-project-256619/chatbox:latest', '.']
