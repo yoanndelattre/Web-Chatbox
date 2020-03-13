@@ -2,7 +2,7 @@ steps:
 
 - id: "Import Firebase config"
   name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', 'gs://chatbox_firebase_conf/conf-firebase.js', './src/']
+  args: ['cp', 'gs://chatbox_website_conf/conf-firebase.js', './src/']
 
 - id: "Build app image"
   name: 'gcr.io/cloud-builders/docker'
