@@ -1,5 +1,9 @@
 steps:
 
+- id: "Import index.html prod file"
+  name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', 'gs://chatbox_website_conf/index.html', './public/']
+
 - id: "Import Firebase config"
   name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', 'gs://chatbox_website_conf/conf-firebase.js', './src/']
