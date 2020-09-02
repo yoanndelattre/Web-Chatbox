@@ -15,6 +15,9 @@ class Connexion extends Component {
             if (user) {
                 this.setState({ pseudo: user.displayName })
             }
+            else {
+                this.setState({ pseudo: null })
+            }
         })
     }
 
