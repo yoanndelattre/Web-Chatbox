@@ -1,17 +1,23 @@
 import React, { Component, Fragment } from 'react'
 import { Redirect } from 'react-router-dom'
 import CookieAlert from '../Cookie-Alert'
+import {signInWithGoogle, auth} from '../conf-firebase'
 
 class Connexion extends Component {
 
     state = {
-        pseudo: '',
-        goToChat: false
+        pseudo: ''
+    }
+
+    componentDidMount() {
+        auth.onAuthStateChanged(user => {
+          this.setState({ pseudo: user.displayName })
+        })
     }
 
     render () {
 
-        if (this.state.goToChat) {
+        if (this.state.pseudo) {
             return <Redirect push to={`/pseudo/${this.state.pseudo}`} />
         }
 
@@ -22,7 +28,7 @@ class Connexion extends Component {
                     <h1 className="title">Chatbox - Conversation</h1>
                     <div className='connexionBox'>
                         <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
-                        
+                        <button onClick={signInWithGoogle}>SIGN IN WITH GOOGLE</button>
                     </div>
                 </div>
             </Fragment>
