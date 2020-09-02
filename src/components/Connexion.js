@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Redirect } from 'react-router-dom'
-import GoogleButton from 'react-google-button'
+import GoogleButton from "react-google-button/dist/react-google-button"
 import CookieAlert from '../Cookie-Alert'
 import {signInWithGoogle, auth} from '../conf-firebase'
 
@@ -12,7 +12,9 @@ class Connexion extends Component {
 
     componentDidMount() {
         auth.onAuthStateChanged(user => {
-          this.setState({ pseudo: user.displayName })
+            if (user) {
+                this.setState({ pseudo: user.displayName })
+            }
         })
     }
 
