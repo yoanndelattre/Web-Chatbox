@@ -35,22 +35,6 @@ body {
 	align-items: center;
 	min-height: 100vh;
 }
-.connexion {
-	max-width: 500px;
-	font-size: 24px;
-}
-.connexion > * {
-	width: 100%;
-}
-.connexion > input {
-	box-sizing: border-box;
-	font-size: 24px;
-	padding: 5px;
-	border: 5px solid #2196F3;
-	border-width: 0 0 5px 0;
-	outline: none;
-	text-align: center;
-}
 .box {
 	margin: auto;
 	display:flex;
@@ -241,14 +225,6 @@ button:disabled {
 .report-problem:active {
     box-shadow: 1px 1px 10px rgb(255, 0, 0) inset, 0 1px 0 rgba(255, 0, 0, 0); 
     outline-style:none;
-}
-
-/* -------------------------
-	Border
-------------------------- */
-
-.border {
-	margin: 15px;
 }
 
 /* -------------------------
