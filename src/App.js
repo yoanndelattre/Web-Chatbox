@@ -8,7 +8,7 @@ import Formulaire from './components/Formulaire'
 import Message from './components/Message'
 
 // Firebase
-import base from './conf-firebase'
+import base, {auth} from './conf-firebase'
 
 // Animations
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
@@ -50,6 +50,10 @@ class App extends Component {
 
   isUser = pseudo => pseudo === this.state.pseudo
 
+  signOut = () => {
+    auth.signOut()
+  }
+
   render () {
 
     const messages = Object
@@ -72,7 +76,7 @@ class App extends Component {
         <CookieAlert/>
         <div className='box'>
           <div className="border">
-            <a className='home' href="/"><img src={home_logo} alt="home-button"/></a>
+            <button className='home' onClick={this.signOut}><a href='/'><img src={home_logo} alt="home-button"/></a></button>
             <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
             <div className='messages' ref={this.messagesRef}>
               <TransitionGroup className='message'>
