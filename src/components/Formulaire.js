@@ -41,11 +41,11 @@ class Formulaire extends Component {
     render () {
       return (
         <form className='form' onSubmit={this.handleSubmit}>
-            <textarea value={this.state.message} onChange={this.handleChange} onKeyUp={this.handleKeyUp} required maxLength={this.props.length} />
+            <textarea className="entryMessage" value={this.state.message} onChange={this.handleChange} onKeyUp={this.handleKeyUp} required maxLength={this.props.length} />
             <div className='info' >
                 { this.state.length }
             </div>
-            <button type='submit' >
+            <button className='submit' type='submit' >
                 Send
             </button>
       </form>

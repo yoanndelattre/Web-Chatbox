@@ -140,7 +140,7 @@ body {
 	width: 100%;
 }
 
-textarea {
+.entryMessage {
 	box-sizing: border-box;
 	height: 120px;
 	border: 5px solid #2196F3;
@@ -156,7 +156,7 @@ textarea {
 	padding-right: 5px;
 }
 
-button {
+.submit {
 	font-size: 20px;
 	border: none;
 	color: white;
@@ -167,7 +167,7 @@ button {
 	border-radius: 2px;
 }
 
-button:disabled {
+.submit:disabled {
 	background-color: #eceff1;
 	cursor:not-allowed;
 	color: white;
