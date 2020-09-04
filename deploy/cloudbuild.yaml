@@ -18,6 +18,6 @@ steps:
 
 - id: "Deploy new app image"
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'chatbox', '--image=gcr.io/chatbox-287710/chatbox:latest', '--region=us-central1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m', '--max-instances=12', '--memory=256Mi', '--cpu=1']
+  args: ['run', 'deploy', 'chatbox', '--image=gcr.io/chatbox-287710/chatbox:latest', '--region=us-central1', '--allow-unauthenticated', '--concurrency=30', '--platform=managed', '--timeout=1m', '--max-instances=50', '--memory=256Mi', '--cpu=1']
 
 timeout: 300s
