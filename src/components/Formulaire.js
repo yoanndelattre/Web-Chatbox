@@ -40,7 +40,13 @@ class Formulaire extends Component {
     render() {
       return (
         <form className='form' onSubmit={this.handleSubmit}>
-          <textarea className="entryMessage" value={this.state.message} onChange={this.handleChange} onKeyUp={this.handleKeyUp} required maxLength={this.props.length} />
+          <textarea
+            className="entryMessage"
+            value={this.state.message}
+            onChange={this.handleChange}
+            onKeyUp={this.handleKeyUp}
+            required
+            maxLength={this.props.length} />
           <div className='info' >
             { this.state.length }
           </div>
