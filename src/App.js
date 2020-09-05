@@ -1,7 +1,7 @@
 import React, {Component, createRef, Fragment} from 'react';
 import './App.css';
 import './animations.css';
-import home_logo from './img/home.png';
+import HomeLogo from './img/home.png';
 import CookieAlert from './Cookie-Alert';
 
 import Formulaire from './components/Formulaire';
@@ -74,7 +74,7 @@ class App extends Component {
         <CookieAlert/>
         <div className='box'>
           <div className="border">
-            <button className='home' onClick={this.signOut}><a href='/'><img src={home_logo} alt="home-button"/></a></button>
+            <button className='home' onClick={this.signOut}><a href='/'><img src={HomeLogo} alt="home-button"/></a></button>
             <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
             <div className='messages' ref={this.messagesRef}>
               <TransitionGroup className='message'>
