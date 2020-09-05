@@ -74,14 +74,19 @@ class App extends Component {
         <CookieAlert/>
         <div className='box'>
           <div className="border">
-            <button className='home' onClick={this.signOut}><a href='/'><img src={HomeLogo} alt="home-button"/></a></button>
+            <button className='home' onClick={this.signOut}>
+              <a href='/'><img src={HomeLogo} alt="home-button"/></a>
+            </button>
             <a className='report-problem' target="blank" href="https://github.com/yoanndelattre/Web-Chatbox/issues">Report a Problem</a>
             <div className='messages' ref={this.messagesRef}>
               <TransitionGroup className='message'>
                 { messages }
               </TransitionGroup>
             </div>
-            <Formulaire length={140} pseudo={this.state.pseudo} addMessage={this.addMessage} />
+            <Formulaire
+              length={140}
+              pseudo={this.state.pseudo}
+              addMessage={this.addMessage} />
           </div>
         </div>
       </Fragment>
